@@ -1,19 +1,6 @@
-
-
 // Assignment Code
-var generateBtn = document.querySelector("#generate")
-var passChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
-  "!", "@", "#", "$", "%", "^", "&", "*"];
-
-
-var promptLength = prompt("Choose length of password between 8 - 128 characters.")
-
-function generatePassword() {
-  // Loop through the array
-  for(var i = 0; i < passChar.length; i ++) {
-    return passChar.random
-  }
+var generateBtn = document.querySelector("#generate");
+var passChar = ['abcdefjhijklmnopqrstuvwxyz0123456789!@#$%^&*'] 
 
   
 
@@ -23,8 +10,17 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
- 
+
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword,);
+generateBtn.addEventListener("click", writePassword);
+
+function generatePassword() {
+  prompt("Choose length of password between 8 - 128 characters.");
+  confirm("Click OK to confirm including lower case characters");
+  confirm("Click OK to confirm including upper case characters");
+  confirm("Click OK to confirm including numeric characters");
+  confirm("Click OK to Confirm including special characters");
+
+}
